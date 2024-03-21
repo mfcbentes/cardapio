@@ -181,8 +181,9 @@
   </div>
 
   <!-- Modal -->
-  <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
-    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+  <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden transition-all duration-500 ease-in-out p-5">
+    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] relative">
+      <button id="close-modal-btn" class="absolute right-3 top-3" aria-label="Fechar modal">X</button>
       <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
       <div id="cart-item" class="flex justify-between mb-2 flex-col"></div>
       <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
@@ -190,8 +191,7 @@
       <input type="text" placeholder="Digite seu endereço completo..." id="address" class="w-full border-2 p-1 rounded my-1">
       <p id="address-warn" class="text-red-500 hidden">Digite seu endereço completo!</p>
       <div class="flex items-center justify-between mt-5 w-full">
-        <button id="close-modal-btn">Fechar</button>
-        <button id="checkout-btn" class="bg-green-500 hover:bg-green-400 text-white px-4 py-1 rounded">Finalizar o pedido</button>
+        <button id="checkout-btn" class="bg-green-500 hover:bg-green-400 text-white px-4 py-1 rounded" aria-label="Finalizar o pedido">Finalizar o pedido</button>
       </div>
     </div>
   </div>
